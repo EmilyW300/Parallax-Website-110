@@ -62,12 +62,20 @@ html {
     padding: 6px 15px;
     color: #003549;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #header ul li a:hover,
 #header ul li a.active {
     background: #003549;
     color: white;
+}
+
+.nav-label {
+    font-size: 0.9em;
+    line-height: 1.2;
 }
 
 /* The Section Body... Set it to max size of screen */
@@ -188,6 +196,52 @@ section #text {
 /* Properties for text content */
 .sec h2 {
     font-size: 3.5em;
+}
+
+.bilingual-title {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.2em;
+}
+
+.bilingual-inline {
+    display: flex;
+    gap: 0.5em;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.bilingual-block {
+    display: grid;
+    gap: 0.8em;
+    grid-template-columns: 1fr;
+}
+
+.bilingual-list {
+    display: grid;
+    gap: 1em;
+}
+
+.lang-cn,
+.lang-jp {
+    display: block;
+}
+
+.signature {
+    text-align: center;
+    gap: 0.6em;
+}
+
+.footer-heading {
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+@media screen and (min-width: 768px) {
+    .bilingual-title,
+    .bilingual-block {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 .sec #name {
